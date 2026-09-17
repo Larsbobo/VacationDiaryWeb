@@ -19,7 +19,7 @@ body { margin: 0; background: radial-gradient(circle at 80% 5%, #e4edff 0, trans
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; }
 .page-width { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
-.site-header { align-items: center; backdrop-filter: blur(18px); background: rgba(244,247,252,.78); border-bottom: 1px solid rgba(255,255,255,.8); display: flex; justify-content: space-between; padding: 18px 32px; position: relative; width: 100%; z-index: 4; }
+.site-header { align-items: center; backdrop-filter: blur(18px); background: rgba(0,0,0,.88); border-bottom: 1px solid rgba(255,255,255,.08); color: white; display: flex; justify-content: space-between; padding: 18px 32px; position: relative; width: 100%; z-index: 4; }
 .brand { align-items: center; display: inline-flex; font-size: 16px; font-weight: 800; letter-spacing: -.05em; }
 .brand > span:last-child > span { color: #4b78df; }
 .brand-mark { align-items: center; background: linear-gradient(135deg, #80aaff, #4676df); border-radius: 11px; box-shadow: 0 7px 15px rgba(70,118,223,.25); color: white; display: inline-flex; font-size: 14px; height: 32px; justify-content: center; margin-right: 9px; transform: rotate(-5deg); width: 32px; }
@@ -32,6 +32,82 @@ button { font-family: inherit; }
 .language-button { background: none; border: 0; color: #9a9c97; cursor: pointer; font: inherit; padding: 3px 1px; }
 .language-button.is-active { color: #4b78df; font-weight: 500; }
 .menu-toggle { background: none; border: 0; color: var(--ink); display: none; font-size: 23px; }
+.hero { align-items: center; display: grid; gap: 7%; grid-template-columns: 1fr 1fr; min-height: 630px; padding-bottom: 70px; padding-top: 47px; }
+.hero-copy { max-width: 500px; }
+.hero-visual { height: 505px; position: relative; }
+.hero-text { color: var(--muted); max-width: 430px; }
+.hero-actions { align-items: center; display: flex; gap: 24px; margin-top: 32px; }
+.app-store-button { align-items: center; background: var(--ink); border-radius: 14px; box-shadow: 0 9px 18px rgba(23,32,51,.16); color: var(--paper); display: flex; gap: 11px; padding: 12px 16px; transition: transform .2s, background .2s; }
+.app-store-button:hover { background: #4b78df; transform: translateY(-3px); }
+.apple-icon { border: 1px solid var(--paper); border-radius: 50%; font-size: 7px; height: 18px; line-height: 15px; text-align: center; width: 18px; }
+.app-store-button span:nth-child(2) { display: flex; flex-direction: column; font-size: 14px; font-weight: 800; line-height: 1.1; }
+.app-store-button small { font-size: 8px; font-weight: 500; margin-bottom: 3px; }
+.button-arrow { color: var(--yellow); margin-left: 12px; }
+.text-link { border-bottom: 1px solid var(--ink); font-size: 12px; font-weight: 700; padding-bottom: 5px; }
+.micro-copy { color: #9a9c97; font-family: var(--mono); font-size: 9px; margin: 17px 0 0; }
+.sun-shape { background: linear-gradient(135deg, #dce8ff, #9dbbff); border-radius: 50%; height: 420px; left: 12%; position: absolute; top: 25px; width: 420px; }
+.phone-shadow { background: rgba(32,50,88,.16); border-radius: 50%; bottom: 28px; filter: blur(20px); height: 40px; left: 17%; position: absolute; transform: rotate(-8deg); width: 330px; }
+.phone { background: #242b3c; border: 5px solid #182033; border-radius: 42px; box-shadow: 0 24px 45px rgba(32,50,88,.24); height: 540px; left: 22%; overflow: hidden; position: absolute; top: 0; transform: rotate(4deg); width: 275px; }
+.phone-speaker { background: #111827; border-radius: 20px; height: 15px; left: 50%; position: absolute; top: 10px; transform: translateX(-50%); width: 72px; z-index: 2; }
+.phone-screen { background: #f5f8fe; height: 100%; padding: 35px 16px 13px; position: relative; }
+.phone-screen .status-bar { color: #172033; display: flex; font-size: 8px; justify-content: space-between; }
+.screen-actions { color: #079cf0; display: flex; font-size: 25px; gap: 9px; justify-content: flex-end; margin: 12px 0 14px; }
+.screen-actions span:last-child { background: #079cf0; border-radius: 50%; color: #000; font-size: 29px; height: 34px; line-height: 31px; text-align: center; width: 34px; }
+.preview-kicker { color: #079cf0; font-size: 7px; font-weight: 800; letter-spacing: .15em; margin: 0; text-transform: uppercase; }
+.app-preview-screen h2 { color: #172033; font-family: var(--serif); font-size: 29px; letter-spacing: -.06em; line-height: .95; margin: 7px 0; }
+.preview-summary { color: #85858d; font-size: 8px; margin: 0 0 14px; }
+.preview-trip { background: linear-gradient(155deg, #ec2955, #a51f3d 45%, #250811); border: 1px solid #b51d43; border-radius: 21px; color: white; height: 270px; padding: 12px; position: relative; }
+.preview-trip-top { display: flex; justify-content: space-between; }
+.preview-trip-top > span { background: #ff376b; border-radius: 999px; font-size: 7px; font-weight: 800; padding: 7px 9px; text-transform: uppercase; }
+.preview-trip-top b { align-items: center; background: #ff376b; border-radius: 50%; display: flex; flex-direction: column; font-size: 23px; height: 45px; justify-content: center; line-height: .7; width: 45px; }
+.preview-trip-top small { display: block; font-size: 6px; margin-top: 5px; text-transform: uppercase; }
+.preview-trip-bottom { bottom: 12px; left: 13px; position: absolute; }
+.preview-trip-bottom > span { display: block; font-size: 27px; }
+.preview-trip-bottom strong { display: block; font-family: var(--serif); font-size: 28px; line-height: 1; }
+.preview-trip-bottom small { font-size: 6px; font-weight: 700; letter-spacing: .1em; }
+.preview-filters { display: flex; gap: 4px; margin: 9px 0; }
+.preview-filters span { background: #202024; border-radius: 999px; color: white; font-size: 6px; padding: 6px 8px; }
+.preview-filters .active { background: #079cf0; }
+.preview-empty { align-items: center; background: #141416; border-radius: 14px; color: #94949b; display: flex; flex-direction: column; font-size: 18px; justify-content: center; min-height: 72px; }
+.preview-empty span { font-size: 20px; line-height: 1; }
+.preview-empty small { font-size: 7px; margin-top: 5px; }
+.preview-tabs { align-items: center; background: rgba(38,38,41,.96); border-radius: 22px; bottom: 8px; color: white; display: flex; justify-content: space-around; left: 8px; padding: 4px; position: absolute; right: 8px; }
+.preview-tabs span { align-items: center; display: flex; flex-direction: column; font-size: 12px; }
+.preview-tabs small { font-size: 5px; margin-top: 2px; }
+.preview-tabs .active { color: #079cf0; }
+.floating-note { align-items: center; background: var(--glass); border: 1px solid rgba(255,255,255,.85); border-radius: 17px; box-shadow: 0 13px 25px rgba(32,50,88,.14); display: flex; gap: 7px; padding: 13px 17px; position: absolute; right: 0; transform: rotate(-4deg); }
+.floating-note span { color: #4b78df; font-size: 17px; }
+.floating-note strong { font-size: 19px; line-height: 1; }
+.floating-note small { color: var(--muted); font-size: 9px; }
+.app-home { background: #000; color: #fff; margin: 0; max-width: none; min-height: 850px; padding: 26px max(32px, calc((100% - 1160px) / 2)) 94px; width: 100%; }
+.app-toolbar { align-items: center; display: flex; justify-content: space-between; }
+.app-time { font-size: 25px; font-weight: 700; letter-spacing: -.04em; }
+.app-actions { display: flex; gap: 18px; }
+.app-actions button { align-items: center; background: #17171a; border: 1px solid #303035; border-radius: 50%; color: #0aa7ff; display: flex; font-size: 38px; height: 79px; justify-content: center; line-height: 1; width: 79px; }
+.app-actions .add-action { background: #079cf0; border-color: #39b8ff; color: #000; font-size: 53px; }
+.app-heading { margin-top: 38px; }
+.app-kicker { color: #079cf0; font-size: 18px; font-weight: 800; letter-spacing: .22em; margin-bottom: 11px; text-transform: uppercase; }
+.app-heading h1 { color: #fff; font-family: var(--serif); font-size: clamp(48px, 6vw, 78px); letter-spacing: -.06em; line-height: .98; margin: 0; }
+.app-summary { color: #85858d; font-size: 22px; margin: 14px 0 40px; }
+.trip-card { background: linear-gradient(155deg, #ec2955 0%, #a51f3d 43%, #250811 100%); border: 2px solid #b51d43; border-radius: 48px; box-shadow: 0 22px 42px rgba(196,22,64,.2); height: 620px; padding: 31px; position: relative; }
+.trip-card-top { align-items: flex-start; display: flex; justify-content: space-between; }
+.trip-status { align-items: center; background: #ff376b; border-radius: 999px; display: inline-flex; font-size: 18px; font-weight: 800; gap: 10px; letter-spacing: .12em; padding: 13px 23px; text-transform: uppercase; }
+.trip-status-icon { align-items: center; background: #ff376b; border-radius: 50%; display: flex; flex-direction: column; font-size: 42px; font-weight: 800; height: 105px; justify-content: center; line-height: .8; width: 105px; }
+.trip-status-icon small { font-size: 15px; margin-top: 11px; text-transform: uppercase; }
+.trip-card-bottom { bottom: 34px; left: 34px; position: absolute; }
+.trip-emoji { display: block; font-size: 66px; margin-bottom: 13px; }
+.trip-card-bottom h2 { color: #fff; font-family: var(--serif); font-size: 62px; letter-spacing: -.06em; margin: 0 0 11px; }
+.trip-card-bottom p { color: #fff; font-size: 18px; font-weight: 700; letter-spacing: .14em; margin: 0; }
+.trip-filters { display: flex; gap: 14px; margin: 25px 0 40px; }
+.trip-filters button { background: #202024; border: 0; border-radius: 999px; color: #fff; cursor: pointer; font-size: 18px; font-weight: 700; padding: 14px 26px; }
+.trip-filters button.is-active { background: #079cf0; }
+.empty-trip-state { align-items: center; background: #141416; border-radius: 35px; color: #94949b; display: flex; flex-direction: column; font-size: 18px; justify-content: center; min-height: 180px; }
+.empty-trip-state span { font-size: 44px; line-height: 1; }
+.empty-trip-state p { margin: 12px 0 0; }
+.app-tabbar { align-items: stretch; background: rgba(38,38,41,.96); border: 1px solid #46464b; border-radius: 50px; bottom: 24px; box-shadow: 0 9px 28px rgba(0,0,0,.5); display: flex; justify-content: space-around; left: 50%; max-width: 700px; padding: 7px; position: sticky; transform: translateX(-50%); width: min(100%, 700px); z-index: 3; }
+.app-tabbar a { align-items: center; border-radius: 38px; color: #ededf0; display: flex; flex: 1; flex-direction: column; font-size: 28px; justify-content: center; min-height: 70px; }
+.app-tabbar a.is-active { background: #4c4c50; color: #079cf0; }
+.app-tabbar small { font-size: 12px; margin-top: 2px; }
 .hero { align-items: center; display: grid; gap: 7%; grid-template-columns: 1fr 1fr; min-height: 630px; padding-bottom: 70px; padding-top: 47px; }
 .eyebrow { align-items: center; color: #4b78df; display: flex; font-family: var(--mono); font-size: 10px; letter-spacing: .1em; margin: 0 0 24px; text-transform: uppercase; }
 .eyebrow span { background: currentColor; border-radius: 50%; height: 7px; margin-right: 10px; width: 7px; }
@@ -130,10 +206,17 @@ h2 { font-size: clamp(37px, 4.7vw, 64px); letter-spacing: -.08em; line-height: 1
 @media (max-width: 760px) {
   .page-width { width: min(100% - 40px, 520px); }
   .site-header { padding: 19px 20px; }
-  .menu-toggle { display: block; }
+  .menu-toggle { color: white; display: block; }
   .nav-links { background: var(--paper); box-shadow: 0 15px 22px rgba(32,50,88,.08); display: none; flex-direction: column; gap: 20px; left: 0; padding: 24px 20px 28px; position: absolute; right: 0; top: 67px; z-index: 5; }
   .nav-links.is-open { display: flex; }
   .language-switch { margin-left: 0; }
+  .hero { display: block; min-height: auto; padding-bottom: 35px; padding-top: 48px; }
+  .hero-visual { height: 570px; margin-top: 45px; }
+  .sun-shape { height: 320px; left: 5%; top: 65px; width: 320px; }
+  .phone-shadow { left: 10%; width: 270px; }
+  .phone { left: 19%; }
+  .floating-note { right: 0; }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
   .hero { display: block; min-height: auto; padding-bottom: 35px; padding-top: 48px; }
   h1 { font-size: clamp(55px, 16vw, 78px); }
   .hero-visual { height: 490px; margin-top: 45px; }
@@ -159,4 +242,26 @@ h2 { font-size: clamp(37px, 4.7vw, 64px); letter-spacing: -.08em; line-height: 1
   .site-footer p { display: none; }
   .site-footer small { margin-left: auto; }
   .footer-links { justify-content: flex-start; order: 3; width: 100%; }
+  .app-home { min-height: 820px; padding: 22px 20px 86px; }
+  .app-time { font-size: 20px; }
+  .app-actions button { height: 60px; width: 60px; font-size: 29px; }
+  .app-actions .add-action { font-size: 40px; }
+  .app-heading { margin-top: 29px; }
+  .app-kicker { font-size: 13px; }
+  .app-heading h1 { font-size: clamp(44px, 13vw, 62px); }
+  .app-summary { font-size: 17px; margin-bottom: 30px; }
+  .trip-card { border-radius: 34px; height: 470px; padding: 20px; }
+  .trip-status { font-size: 13px; padding: 10px 16px; }
+  .trip-status-icon { font-size: 30px; height: 78px; width: 78px; }
+  .trip-status-icon small { font-size: 11px; margin-top: 8px; }
+  .trip-card-bottom { bottom: 25px; left: 25px; }
+  .trip-emoji { font-size: 52px; }
+  .trip-card-bottom h2 { font-size: 49px; }
+  .trip-card-bottom p { font-size: 12px; }
+  .trip-filters { gap: 8px; margin: 18px 0 28px; }
+  .trip-filters button { font-size: 14px; padding: 12px 17px; }
+  .empty-trip-state { border-radius: 28px; min-height: 140px; }
+  .app-tabbar { bottom: 15px; }
+  .app-tabbar a { font-size: 21px; min-height: 58px; }
+  .app-tabbar small { font-size: 9px; }
 }

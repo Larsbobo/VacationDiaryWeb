@@ -8,6 +8,8 @@ const planControl = document.querySelector('.plan-control');
 const translations = {
   de: {
     navFeatures: 'Was dich erwartet', navSupport: 'Support', navDownload: 'Im App Store laden',
+    appKicker: 'Gerade unterwegs', appTitle: 'Willkommen in Miami', appSummary: '1 Reise · 0 geplant · 0 erinnert', tripCurrent: 'Aktuell', tripActive: 'Aktiv',
+    filterAll: 'Alle', filterUpcoming: 'Kommend', filterPast: 'Vergangen', emptyTrips: 'Noch keine weiteren Urlaube.', tabTrips: 'Urlaube', tabToday: 'Aktuell', tabMap: 'Karte', tabBucket: 'Bucketlist', tabSettings: 'Einstellungen',
     heroEyebrow: 'Dein persönliches Reisetagebuch', heroTitle: 'Halte fest,<br><em>was bleibt.</em>',
     heroText: 'Vacation Diary macht aus kleinen Momenten große Erinnerungen. Sammle Orte, Gedanken und Bilder in deinem ganz persönlichen Reisetagebuch.',
     downloadSmall: 'Jetzt laden im', appStore: 'App Store', discover: 'Mehr entdecken', microCopy: 'Kostenlos starten · Für iPhone entwickelt',
@@ -24,6 +26,8 @@ const translations = {
   },
   en: {
     navFeatures: 'What to expect', navSupport: 'Support', navDownload: 'Download on the App Store',
+    appKicker: 'Currently traveling', appTitle: 'Welcome to Miami', appSummary: '1 trip · 0 planned · 0 remembered', tripCurrent: 'Current', tripActive: 'Active',
+    filterAll: 'All', filterUpcoming: 'Upcoming', filterPast: 'Past', emptyTrips: 'No more trips yet.', tabTrips: 'Trips', tabToday: 'Today', tabMap: 'Map', tabBucket: 'Bucket list', tabSettings: 'Settings',
     heroEyebrow: 'Your personal travel diary', heroTitle: 'Keep what<br><em>stays with you.</em>',
     heroText: 'Vacation Diary turns small moments into lasting memories. Collect places, thoughts, and photos in your own personal travel diary.',
     downloadSmall: 'Download on the', appStore: 'App Store', discover: 'Discover more', microCopy: 'Start for free · Made for iPhone',
