@@ -23,7 +23,7 @@ const translations = {
     featureSixTitle: 'Erinnerungen bewahren', featureSixText: 'Deine Sammlung wächst mit jedem Abenteuer und bleibt immer bei dir.',
     supportEyebrow: 'Wir sind für dich da', supportTitle: 'Fragen?<br><em>Schreib uns.</em>',
     supportText: 'Du hast Feedback, brauchst Hilfe oder möchtest einfach Hallo sagen? Unser kleines Team freut sich auf deine Nachricht.',
-    legalEyebrow: 'Rechtliches', legalTitle: 'Klarheit für<br><em>jede Reise.</em>', documentLabel: 'Dokument', versionLabel: 'Version',
+    legalEyebrow: 'Rechtliches', legalTitle: 'Klarheit für<br><em>jede Reise.</em>', documentLabel: 'Dokument', versionLabel: 'Version', platformLabel: 'Plattform',
     privacyLabel: 'Datenschutz', termsLabel: 'AGB', imprintLabel: 'Impressum', premiumLabel: 'Premium', freeLabel: 'Free',
     documentStatus: 'Datenschutzerklärung · Premium', footerTagline: 'Gemacht für die Momente dazwischen.'
   },
@@ -44,7 +44,7 @@ const translations = {
     featureSixTitle: 'Keep the memories', featureSixText: 'Your collection grows with every adventure and stays with you.',
     supportEyebrow: 'We are here for you', supportTitle: 'Questions?<br><em>Write to us.</em>',
     supportText: 'Have feedback, need help, or simply want to say hello? Our small team would love to hear from you.',
-    legalEyebrow: 'Legal', legalTitle: 'Clarity for<br><em>every journey.</em>', documentLabel: 'Document', versionLabel: 'Version',
+    legalEyebrow: 'Legal', legalTitle: 'Clarity for<br><em>every journey.</em>', documentLabel: 'Document', versionLabel: 'Version', platformLabel: 'Platform',
     privacyLabel: 'Privacy', termsLabel: 'Terms', imprintLabel: 'Imprint', premiumLabel: 'Premium', freeLabel: 'Free',
     documentStatus: 'Privacy Policy · Premium', footerTagline: 'Made for the moments in between.'
   }
@@ -56,9 +56,40 @@ const documentNames = {
   imprint: { de: { premium: 'legal/imprint-de.md', free: 'legal/imprint-de.md' }, en: { premium: 'legal/imprint-en.md', free: 'legal/imprint-en.md' } }
 };
 
+// Android texts live in legal/android/ under the same file names. The imprint is the
+// same for both platforms.
+const platformNames = { ios: 'iOS', android: 'Android' };
+
+function documentPath(type, language, plan, platform) {
+  const file = documentNames[type][language][plan];
+  return platform === 'android' && type !== 'imprint' ? file.replace('legal/', 'legal/android/') : file;
+}
+
 let currentLanguage = 'de';
 let currentType = 'privacy';
 let currentPlan = 'premium';
+let currentPlatform = 'ios';
+
+// Deep links such as ?platform=android&doc=privacy&plan=free&lang=en#legal, so each
+// document has its own URL (e.g. for the Google Play privacy policy field).
+const params = new URLSearchParams(window.location.search);
+if (params.get('platform') in platformNames) currentPlatform = params.get('platform');
+if (['privacy', 'terms', 'imprint'].includes(params.get('doc'))) currentType = params.get('doc');
+if (['premium', 'free'].includes(params.get('plan'))) currentPlan = params.get('plan');
+if (params.get('lang') in translations) currentLanguage = params.get('lang');
+
+function updateUrl() {
+  const query = new URLSearchParams({ platform: currentPlatform, doc: currentType, lang: currentLanguage });
+  if (currentType !== 'imprint') query.set('plan', currentPlan);
+  history.replaceState(null, '', `?${query.toString()}${window.location.hash}`);
+}
+
+function syncControls() {
+  document.querySelectorAll('.legal-platform').forEach((item) => item.classList.toggle('is-active', item.dataset.platform === currentPlatform));
+  document.querySelectorAll('.legal-type').forEach((item) => item.classList.toggle('is-active', item.dataset.legalType === currentType));
+  document.querySelectorAll('.legal-plan').forEach((item) => item.classList.toggle('is-active', item.dataset.plan === currentPlan));
+  planControl.hidden = currentType === 'imprint';
+}
 
 function applyLanguage(language) {
   currentLanguage = language;
@@ -84,9 +115,10 @@ function markdownToHtml(markdown) {
 }
 
 async function loadLegalDocument() {
-  const file = documentNames[currentType][currentLanguage][currentPlan];
+  const file = documentPath(currentType, currentLanguage, currentPlan, currentPlatform);
   const statusKey = currentType === 'privacy' ? 'privacyLabel' : currentType === 'terms' ? 'termsLabel' : 'imprintLabel';
-  documentStatus.textContent = `${translations[currentLanguage][statusKey]}${currentType === 'imprint' ? '' : ` · ${translations[currentLanguage][currentPlan === 'free' ? 'freeLabel' : 'premiumLabel']}`}`;
+  documentStatus.textContent = `${translations[currentLanguage][statusKey]}${currentType === 'imprint' ? '' : ` · ${translations[currentLanguage][currentPlan === 'free' ? 'freeLabel' : 'premiumLabel']} · ${platformNames[currentPlatform]}`}`;
+  updateUrl();
   documentLanguage.textContent = currentLanguage.toUpperCase();
   legalContent.innerHTML = `<p>${currentLanguage === 'de' ? 'Dokument wird geladen …' : 'Loading document …'}</p>`;
   try {
@@ -114,6 +146,14 @@ document.querySelectorAll('.nav-links a').forEach((link) => {
 
 document.querySelectorAll('.language-button').forEach((button) => {
   button.addEventListener('click', () => applyLanguage(button.dataset.language));
+});
+
+document.querySelectorAll('.legal-platform').forEach((button) => {
+  button.addEventListener('click', () => {
+    currentPlatform = button.dataset.platform;
+    syncControls();
+    loadLegalDocument();
+  });
 });
 
 document.querySelectorAll('.legal-type').forEach((button) => {
@@ -144,4 +184,5 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
+syncControls();
 applyLanguage(currentLanguage);
