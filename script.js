@@ -7,12 +7,12 @@ const planControl = document.querySelector('.plan-control');
 
 const translations = {
   de: {
-    navFeatures: 'Was dich erwartet', navSupport: 'Support', navDownload: 'Im App Store laden',
+    navFeatures: 'Was dich erwartet', navSupport: 'Support', navDownload: 'App Store <span aria-hidden="true">↗</span>', navDownloadPlay: 'Google Play <span aria-hidden="true">↗</span>',
     appKicker: 'Gerade unterwegs', appTitle: 'Willkommen in Miami', appSummary: '1 Reise · 0 geplant · 0 erinnert', tripCurrent: 'Aktuell', tripActive: 'Aktiv',
     filterAll: 'Alle', filterUpcoming: 'Kommend', filterPast: 'Vergangen', emptyTrips: 'Noch keine weiteren Urlaube.', tabTrips: 'Urlaube', tabToday: 'Aktuell', tabMap: 'Karte', tabBucket: 'Bucketlist', tabSettings: 'Einstellungen',
     heroEyebrow: 'Dein persönliches Reisetagebuch', heroTitle: 'Halte fest,<br><em>was bleibt.</em>',
     heroText: 'Vacation Diary macht aus kleinen Momenten große Erinnerungen. Sammle Orte, Gedanken und Bilder in deinem ganz persönlichen Reisetagebuch.',
-    downloadSmall: 'Jetzt laden im', appStore: 'App Store', discover: 'Mehr entdecken', microCopy: 'Kostenlos starten · Für iPhone entwickelt',
+    downloadSmall: 'Jetzt laden im', appStore: 'App Store', downloadSmallPlay: 'Jetzt bei', googlePlay: 'Google Play', discover: 'Mehr entdecken', microCopy: 'Kostenlos starten · Für iPhone und Android',
     featuresEyebrow: 'Für unterwegs gemacht', featuresTitle: 'Planen, teilen, <em>abrechnen.</em>',
     featuresText: 'Vacation Diary begleitet dich vom ersten Plan bis zur letzten Ausgabe, alleine oder gemeinsam mit Freunden.', proLabel: 'PRO', freeFeatureLabel: 'FREE',
     featureOneTitle: 'Urlaub planen', featureOneText: 'Sammle Orte, Aktivitäten, Packlisten und Budgets an einem übersichtlichen Reiseort.',
@@ -28,12 +28,12 @@ const translations = {
     documentStatus: 'Datenschutzerklärung · Premium', footerTagline: 'Gemacht für die Momente dazwischen.'
   },
   en: {
-    navFeatures: 'What to expect', navSupport: 'Support', navDownload: 'Download on the App Store',
+    navFeatures: 'What to expect', navSupport: 'Support', navDownload: 'App Store <span aria-hidden="true">↗</span>', navDownloadPlay: 'Google Play <span aria-hidden="true">↗</span>',
     appKicker: 'Currently traveling', appTitle: 'Welcome to Miami', appSummary: '1 trip · 0 planned · 0 remembered', tripCurrent: 'Current', tripActive: 'Active',
     filterAll: 'All', filterUpcoming: 'Upcoming', filterPast: 'Past', emptyTrips: 'No more trips yet.', tabTrips: 'Trips', tabToday: 'Today', tabMap: 'Map', tabBucket: 'Bucket list', tabSettings: 'Settings',
     heroEyebrow: 'Your personal travel diary', heroTitle: 'Keep what<br><em>stays with you.</em>',
     heroText: 'Vacation Diary turns small moments into lasting memories. Collect places, thoughts, and photos in your own personal travel diary.',
-    downloadSmall: 'Download on the', appStore: 'App Store', discover: 'Discover more', microCopy: 'Start for free · Made for iPhone',
+    downloadSmall: 'Download on the', appStore: 'App Store', downloadSmallPlay: 'Get it on', googlePlay: 'Google Play', discover: 'Discover more', microCopy: 'Start for free · For iPhone and Android',
     featuresEyebrow: 'Made for the road', featuresTitle: 'Plan, share, <em>settle up.</em>',
     featuresText: 'Vacation Diary takes you from the first plan to the last expense, solo or together with friends.', proLabel: 'PRO', freeFeatureLabel: 'FREE',
     featureOneTitle: 'Plan your trip', featureOneText: 'Collect places, activities, packing lists, and budgets in one clear trip space.',
@@ -77,8 +77,12 @@ if (params.get('platform') in platformNames) currentPlatform = params.get('platf
 if (['privacy', 'terms', 'imprint'].includes(params.get('doc'))) currentType = params.get('doc');
 if (['premium', 'free'].includes(params.get('plan'))) currentPlan = params.get('plan');
 if (params.get('lang') in translations) currentLanguage = params.get('lang');
+// Only reflect the selection in the address once the visitor works with the legal
+// section (or arrived through such a link) — a plain visit keeps a clean URL.
+let legalUrlActive = ['platform', 'doc', 'plan'].some((key) => params.has(key));
 
 function updateUrl() {
+  if (!legalUrlActive) return;
   const query = new URLSearchParams({ platform: currentPlatform, doc: currentType, lang: currentLanguage });
   if (currentType !== 'imprint') query.set('plan', currentPlan);
   history.replaceState(null, '', `?${query.toString()}${window.location.hash}`);
@@ -151,6 +155,7 @@ document.querySelectorAll('.language-button').forEach((button) => {
 document.querySelectorAll('.legal-platform').forEach((button) => {
   button.addEventListener('click', () => {
     currentPlatform = button.dataset.platform;
+    legalUrlActive = true;
     syncControls();
     loadLegalDocument();
   });
@@ -159,6 +164,7 @@ document.querySelectorAll('.legal-platform').forEach((button) => {
 document.querySelectorAll('.legal-type').forEach((button) => {
   button.addEventListener('click', () => {
     currentType = button.dataset.legalType;
+    legalUrlActive = true;
     document.querySelectorAll('.legal-type').forEach((item) => item.classList.toggle('is-active', item === button));
     planControl.hidden = currentType === 'imprint';
     loadLegalDocument();
@@ -168,6 +174,7 @@ document.querySelectorAll('.legal-type').forEach((button) => {
 document.querySelectorAll('.legal-plan').forEach((button) => {
   button.addEventListener('click', () => {
     currentPlan = button.dataset.plan;
+    legalUrlActive = true;
     document.querySelectorAll('.legal-plan').forEach((item) => item.classList.toggle('is-active', item === button));
     loadLegalDocument();
   });
