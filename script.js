@@ -25,7 +25,7 @@ const translations = {
     supportText: 'Du hast Feedback, brauchst Hilfe oder möchtest einfach Hallo sagen? Unser kleines Team freut sich auf deine Nachricht.',
     legalEyebrow: 'Rechtliches', legalTitle: 'Klarheit für<br><em>jede Reise.</em>', documentLabel: 'Dokument', versionLabel: 'Version', platformLabel: 'Plattform',
     privacyLabel: 'Datenschutz', termsLabel: 'AGB', imprintLabel: 'Impressum', premiumLabel: 'Premium', freeLabel: 'Free',
-    documentStatus: 'Datenschutzerklärung · Premium', footerTagline: 'Gemacht für die Momente dazwischen.'
+    documentStatus: 'Datenschutzerklärung · Premium', footerTagline: 'Gemacht für die Momente dazwischen.', deleteAccountLabel: 'Konto löschen'
   },
   en: {
     navFeatures: 'What to expect', navSupport: 'Support', navDownload: 'App Store <span aria-hidden="true">↗</span>', navDownloadPlay: 'Google Play <span aria-hidden="true">↗</span>',
@@ -46,7 +46,7 @@ const translations = {
     supportText: 'Have feedback, need help, or simply want to say hello? Our small team would love to hear from you.',
     legalEyebrow: 'Legal', legalTitle: 'Clarity for<br><em>every journey.</em>', documentLabel: 'Document', versionLabel: 'Version', platformLabel: 'Platform',
     privacyLabel: 'Privacy', termsLabel: 'Terms', imprintLabel: 'Imprint', premiumLabel: 'Premium', freeLabel: 'Free',
-    documentStatus: 'Privacy Policy · Premium', footerTagline: 'Made for the moments in between.'
+    documentStatus: 'Privacy Policy · Premium', footerTagline: 'Made for the moments in between.', deleteAccountLabel: 'Delete account'
   }
 };
 

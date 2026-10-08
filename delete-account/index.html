@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VacationDiary: So löschst du dein Konto und deine Daten.">
+  <title>Konto löschen | Vacation Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .delete-page { padding-bottom: 70px; padding-top: 70px; }
+    .delete-page h1 { font-size: clamp(40px, 6vw, 68px); }
+    .delete-page .lead { color: var(--muted); font-size: 16px; max-width: 640px; }
+    .delete-grid { display: grid; gap: 22px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); margin-top: 44px; }
+    .delete-card { background: var(--glass); border: 1px solid rgba(255,255,255,.82); border-radius: 26px; box-shadow: 0 12px 28px rgba(32,50,88,.07); padding: 26px 28px; }
+    .delete-card.wide { grid-column: 1 / -1; }
+    .delete-card h2 { font-size: 21px; letter-spacing: -.04em; line-height: 1.2; margin-bottom: 14px; }
+    .delete-card p, .delete-card li { color: var(--muted); font-size: 14px; }
+    .delete-card ol, .delete-card ul { margin: 0; padding-left: 20px; }
+    .delete-card li { margin-bottom: 8px; }
+    .delete-card strong { color: var(--ink); }
+    .delete-card a { color: #4b78df; font-weight: 700; }
+    .step-path { background: rgba(75,120,223,.1); border-radius: 8px; color: var(--ink); font-family: var(--mono); font-size: 12px; padding: 2px 8px; white-space: nowrap; }
+    .mail-button { background: var(--ink); border-radius: 999px; color: white !important; display: inline-block; margin-top: 6px; padding: 10px 16px; }
+    .mail-button span { color: var(--yellow); margin-left: 6px; }
+    [data-lang]:not(.is-current) { display: none; }
+    @media (max-width: 760px) { .delete-grid { grid-template-columns: minmax(0, 1fr); } .delete-page { padding-top: 50px; } .step-path { white-space: normal; } .delete-card { padding: 22px 20px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Vacation Diary Startseite">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span>vacation<span>diary</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Sprache">
+      <div class="language-switch" aria-label="Language / Sprache"><button class="language-button is-active" type="button" data-language="de">DE</button><span>/</span><button class="language-button" type="button" data-language="en">EN</button></div>
+    </nav>
+  </header>
+
+  <main class="delete-page page-width">
+    <!-- Deutsch -->
+    <section data-lang="de" class="is-current">
+      <p class="eyebrow"><span></span> <span>VacationDiary · Lars Till Neumann</span></p>
+      <h1>Konto und Daten<br><em>löschen.</em></h1>
+      <p class="lead">Auf dieser Seite erfährst du, wie du dein VacationDiary-Konto (Pro-Version) und die dazugehörigen Daten löschen kannst — direkt in der App oder ohne App per E-Mail.</p>
+
+      <div class="delete-grid">
+        <article class="delete-card">
+          <h2>In der App löschen</h2>
+          <ol>
+            <li>Öffne VacationDiary und melde dich an.</li>
+            <li>Gehe zu <span class="step-path">Einstellungen → Konto</span>.</li>
+            <li>Tippe auf <strong>„Konto löschen“</strong> und bestätige.</li>
+          </ol>
+          <p>Die Löschung wird sofort ausgeführt.</p>
+        </article>
+
+        <article class="delete-card">
+          <h2>Ohne App per E-Mail</h2>
+          <p>Du hast keinen Zugriff mehr auf die App? Schreib uns von der E-Mail-Adresse, mit der dein Konto registriert ist, und bitte um Löschung deines Kontos.</p>
+          <p><a class="mail-button" href="mailto:support@vacationdiary.app?subject=Konto%20l%C3%B6schen">support@vacationdiary.app<span>↗</span></a></p>
+          <p>Wir bearbeiten deine Anfrage spätestens innerhalb von 30 Tagen und bestätigen dir die Löschung per E-Mail.</p>
+        </article>
+
+        <article class="delete-card wide">
+          <h2>Was gelöscht wird — und was bleibt</h2>
+          <ul>
+            <li><strong>Endgültig gelöscht:</strong> deine E-Mail-Adresse, dein Passwort (gehasht gespeichert), dein Nickname und Avatar sowie deine Einwilligungsdaten.</li>
+            <li><strong>Vollständig gelöscht:</strong> Urlaube, in denen du allein bist — mit allen Trips, Ausgaben, Dokumenten, Aufgaben, Packlisten, Journal-Einträgen und Fotos.</li>
+            <li><strong>Anonymisiert:</strong> deine Beiträge in Urlauben, die du mit anderen teilst (z. B. Ausgaben, Aufgaben, Fotos). Sie bleiben ohne Bezug zu deiner Person erhalten, damit die Abrechnungen und Inhalte deiner Mitreisenden weiter funktionieren. Dort erscheinst du als „Gelöschter Nutzer“.</li>
+          </ul>
+          <p>Darüber hinaus bewahren wir keine Daten zu deinem Konto auf.</p>
+        </article>
+
+        <article class="delete-card">
+          <h2>Abonnement</h2>
+          <p>Das Löschen deines Kontos beendet <strong>nicht</strong> automatisch ein laufendes Pro-Abonnement. Kündige es bitte separat — unter Android im Google Play Store (<span class="step-path">Profil → Zahlungen &amp; Abos → Abos</span>), unter iOS in den Einstellungen deines Apple-Accounts.</p>
+        </article>
+
+        <article class="delete-card">
+          <h2>Free-Version ohne Konto</h2>
+          <p>In der kostenlosen Version gibt es kein Konto, alle Daten liegen nur auf deinem Gerät. Du löschst sie über <span class="step-path">Einstellungen → Daten → Alle lokalen Daten löschen</span> oder indem du die App deinstallierst.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- English -->
+    <section data-lang="en">
+      <p class="eyebrow"><span></span> <span>VacationDiary · Lars Till Neumann</span></p>
+      <h1>Delete your account<br><em>and data.</em></h1>
+      <p class="lead">This page explains how to delete your VacationDiary account (Pro version) and the data associated with it — directly in the app, or by email without the app.</p>
+
+      <div class="delete-grid">
+        <article class="delete-card">
+          <h2>Delete in the app</h2>
+          <ol>
+            <li>Open VacationDiary and sign in.</li>
+            <li>Go to <span class="step-path">Settings → Account</span>.</li>
+            <li>Tap <strong>"Delete account"</strong> and confirm.</li>
+          </ol>
+          <p>The deletion takes effect immediately.</p>
+        </article>
+
+        <article class="delete-card">
+          <h2>Without the app, by email</h2>
+          <p>No longer have access to the app? Write to us from the email address your account is registered with and ask us to delete your account.</p>
+          <p><a class="mail-button" href="mailto:support@vacationdiary.app?subject=Delete%20my%20account">support@vacationdiary.app<span>↗</span></a></p>
+          <p>We process your request within 30 days at the latest and confirm the deletion by email.</p>
+        </article>
+
+        <article class="delete-card wide">
+          <h2>What is deleted — and what remains</h2>
+          <ul>
+            <li><strong>Permanently deleted:</strong> your email address, your password (stored hashed), your nickname and avatar, and your consent records.</li>
+            <li><strong>Fully deleted:</strong> vacations in which you are the only traveler — including all trips, expenses, documents, tasks, packing lists, journal entries, and photos.</li>
+            <li><strong>Anonymized:</strong> your contributions to vacations shared with others (e.g. expenses, tasks, photos). They remain without any link to you so that your co-travelers' settlements and content keep working. You appear there as "Deleted user".</li>
+          </ul>
+          <p>We do not keep any other data about your account.</p>
+        </article>
+
+        <article class="delete-card">
+          <h2>Subscription</h2>
+          <p>Deleting your account does <strong>not</strong> automatically end an active Pro subscription. Please cancel it separately — on Android in the Google Play Store (<span class="step-path">Profile → Payments &amp; subscriptions → Subscriptions</span>), on iOS in your Apple account settings.</p>
+        </article>
+
+        <article class="delete-card">
+          <h2>Free version without an account</h2>
+          <p>The free version has no account; all data stays on your device. Delete it via <span class="step-path">Settings → Data → Delete all local data</span> or by uninstalling the app.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">✳</span><span>vacation<span>diary</span></span></a><p>Made for the moments in between.</p><div class="footer-links"><a href="../#legal">Legal</a><a href="../#support">Support</a></div><small>© 2026 Vacation Diary</small></footer>
+
+  <script>
+    // Same DE / EN switch as the start page; ?lang=en preselects English.
+    const setLanguage = (language) => {
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-lang]').forEach((section) => section.classList.toggle('is-current', section.dataset.lang === language));
+      document.querySelectorAll('.language-button').forEach((button) => button.classList.toggle('is-active', button.dataset.language === language));
+      document.title = language === 'de' ? 'Konto löschen | Vacation Diary' : 'Delete account | Vacation Diary';
+    };
+    document.querySelectorAll('.language-button').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+    const requested = new URLSearchParams(location.search).get('lang');
+    setLanguage(requested === 'en' || (!requested && !navigator.language.startsWith('de')) ? 'en' : 'de');
+  </script>
+</body>
+</html>
