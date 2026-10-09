@@ -84,7 +84,7 @@ Anschrift: Alt-Moabit 59-61, 10555 Berlin
 
 ## 11. Upgrade auf Pro
 
-Wenn du die App durch ein **monatliches, sich automatisch verlängerndes Abonnement** (Produkt-ID `app.vacationdiary.pro.monthly`) zur Pro-Version aufrüstest, gilt eine **erweiterte Datenschutzerklärung**, weil dann ein Konto angelegt wird und Cloud-Sync, Reisegruppen, Foto-Backup und Benachrichtigungen bei zugewiesenen Aufgaben aktiviert werden. Diese siehst du nach dem Abschluss des Abos in der App.
+Wenn du die App durch ein **sich automatisch verlängerndes Abonnement** (monatlich, alle drei Monate oder jährlich; Produkt-ID `app.vacationdiary.pro.monthly`) zur Pro-Version aufrüstest, gilt eine **erweiterte Datenschutzerklärung**, weil dann ein Konto angelegt wird und Cloud-Sync, Reisegruppen, Foto-Backup und Benachrichtigungen bei zugewiesenen Aufgaben aktiviert werden. Diese siehst du nach dem Abschluss des Abos in der App.
 
 **Zahlungsabwicklung**
 
@@ -92,7 +92,7 @@ Kauf, Verlängerung und Abrechnung des Abos wickelt Google über Google Play ab.
 
 **Verlängerung und Kündigung**
 
-Das Abonnement verlängert sich automatisch um jeweils einen Monat, sofern es nicht mindestens 24 Stunden vor Ende der laufenden Periode gekündigt wird. Du kannst dein Abo jederzeit im **Google Play Store** unter *Profil → Zahlungen & Abos → Abos* verwalten und kündigen. Nach Ablauf endet der Zugang zu den Pro-Funktionen; die App bleibt in der Free-Version weiterhin nutzbar.
+Das Abonnement verlängert sich automatisch um die gewählte Laufzeit (1 Monat, 3 Monate oder 1 Jahr), sofern es nicht mindestens 24 Stunden vor Ende der laufenden Periode gekündigt wird. Du kannst dein Abo jederzeit im **Google Play Store** unter *Profil → Zahlungen & Abos → Abos* verwalten und kündigen. Nach Ablauf endet der Zugang zu den Pro-Funktionen; die App bleibt in der Free-Version weiterhin nutzbar.
 
 ## 12. Änderungen dieser Datenschutzerklärung
 

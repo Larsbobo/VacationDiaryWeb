@@ -32,7 +32,7 @@ Die Free-Version ermöglicht es dir lokal auf deinem Gerät:
 - Reisegruppen / Einladungen / geteilte Urlaube
 - Foto-Backup auf einem Server
 
-Diese Funktionen lassen sich durch ein monatliches Abonnement der Pro-Version freischalten.
+Diese Funktionen lassen sich durch ein Abonnement der Pro-Version freischalten.
 
 ## 3. Kein Konto erforderlich
 
@@ -65,7 +65,7 @@ Du kannst die Nutzung jederzeit beenden, indem du die App deinstallierst. Damit 
 
 ## 8. In-App-Käufe
 
-Die Pro-Version kann durch ein monatliches, sich automatisch verlängerndes Abonnement erworben werden. Kauf, Verlängerung und Abrechnung werden über Google Play abgewickelt; es gelten die Nutzungsbedingungen von Google Play. Kündigen kannst du das Abo jederzeit im Google Play Store unter *Profil → Zahlungen & Abos → Abos*.
+Die Pro-Version kann durch ein sich automatisch verlängerndes Abonnement mit einer Laufzeit von einem Monat, drei Monaten oder einem Jahr erworben werden. Kauf, Verlängerung und Abrechnung werden über Google Play abgewickelt; es gelten die Nutzungsbedingungen von Google Play. Kündigen kannst du das Abo jederzeit im Google Play Store unter *Profil → Zahlungen & Abos → Abos*.
 
 ## 9. Änderungen
 

@@ -82,7 +82,7 @@ Address: Alt-Moabit 59-61, 10555 Berlin
 
 ## 11. Upgrade to Pro
 
-If you upgrade the app to the Pro version through a **monthly auto-renewing subscription** (product ID `app.vacationdiary.pro.monthly`), an **extended privacy policy** applies because an account is created and cloud sync, travel groups, photo backup, and notifications for assigned tasks are then activated. You will see it in the app after purchasing the subscription.
+If you upgrade the app to the Pro version through an **auto-renewing subscription** (monthly, every three months, or yearly; product ID `app.vacationdiary.pro.monthly`), an **extended privacy policy** applies because an account is created and cloud sync, travel groups, photo backup, and notifications for assigned tasks are then activated. You will see it in the app after purchasing the subscription.
 
 **Payment processing**
 
@@ -90,7 +90,7 @@ Purchase, renewal, and billing of the subscription are handled by Google via Goo
 
 **Renewal and cancellation**
 
-The subscription automatically renews for another month unless it is cancelled at least 24 hours before the end of the current period. You can manage and cancel your subscription at any time in the **Google Play Store** under *Profile → Payments & subscriptions → Subscriptions*. After the paid period expires, access to Pro features ends and the app continues to be usable in the Free version.
+The subscription automatically renews for the selected term (1 month, 3 months, or 1 year) unless it is cancelled at least 24 hours before the end of the current period. You can manage and cancel your subscription at any time in the **Google Play Store** under *Profile → Payments & subscriptions → Subscriptions*. After the paid period expires, access to Pro features ends and the app continues to be usable in the Free version.
 
 ## 12. Changes to This Privacy Policy
 

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>E-Mail bestätigt | Vacation Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .confirm-page { padding-bottom: 70px; padding-top: 70px; max-width: 720px; }
+    .confirm-page h1 { font-size: clamp(40px, 6vw, 64px); }
+    .confirm-page .lead { color: var(--muted); font-size: 16px; max-width: 560px; }
+    .open-button { align-items: center; background: var(--ink); border-radius: 999px; box-shadow: 0 9px 18px rgba(23,32,51,.16); color: white; display: inline-flex; font-size: 16px; font-weight: 800; gap: 10px; margin-top: 30px; padding: 15px 24px; }
+    .open-button span { color: var(--yellow); }
+    .hidden { display: none !important; }
+    [data-lang]:not(.is-current) { display: none; }
+    @media (max-width: 760px) { .confirm-page { padding-top: 50px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="Vacation Diary Startseite">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span>vacation<span>diary</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Sprache">
+      <div class="language-switch" aria-label="Language / Sprache"><button class="language-button is-active" type="button" data-language="de">DE</button><span>/</span><button class="language-button" type="button" data-language="en">EN</button></div>
+    </nav>
+  </header>
+
+  <main class="confirm-page page-width">
+    <!-- Deutsch -->
+    <section data-lang="de" class="is-current">
+      <div class="ok-only">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Konto</span></p>
+        <h1>E-Mail<br><em>bestätigt.</em></h1>
+        <p class="lead">Dein Konto ist jetzt aktiv. Öffne VacationDiary und melde dich mit deiner E-Mail-Adresse und deinem Passwort an.</p>
+        <a class="open-button phone-only" data-open-app href="#">Zur App <span>↗</span></a>
+      </div>
+      <div class="error-only hidden">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Konto</span></p>
+        <h1>Link<br><em>abgelaufen.</em></h1>
+        <p class="lead">Dieser Bestätigungslink ist ungültig oder abgelaufen. Öffne VacationDiary, gib deine E-Mail-Adresse und dein Passwort ein und tippe auf <strong>„E-Mail erneut senden“</strong>, um einen neuen Link zu erhalten.</p>
+      </div>
+    </section>
+
+    <!-- English -->
+    <section data-lang="en">
+      <div class="ok-only">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Account</span></p>
+        <h1>Email<br><em>confirmed.</em></h1>
+        <p class="lead">Your account is now active. Open VacationDiary and sign in with your email address and password.</p>
+        <a class="open-button phone-only" data-open-app href="#">Open the app <span>↗</span></a>
+      </div>
+      <div class="error-only hidden">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Account</span></p>
+        <h1>Link<br><em>expired.</em></h1>
+        <p class="lead">This confirmation link is invalid or has expired. Open VacationDiary, enter your email address and password and tap <strong>"Resend email"</strong> to get a new link.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width"><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">✳</span><span>vacation<span>diary</span></span></a><p>Made for the moments in between.</p><div class="footer-links"><a href="../../#legal">Legal</a><a href="../../#support">Support</a></div><small>© 2026 Vacation Diary</small></footer>
+
+  <script>
+    const setLanguage = (language) => {
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-lang]').forEach((section) => section.classList.toggle('is-current', section.dataset.lang === language));
+      document.querySelectorAll('.language-button').forEach((button) => button.classList.toggle('is-active', button.dataset.language === language));
+      document.title = language === 'de' ? 'E-Mail bestätigt | Vacation Diary' : 'Email confirmed | Vacation Diary';
+    };
+    document.querySelectorAll('.language-button').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+    const requested = new URLSearchParams(location.search).get('lang');
+    setLanguage(requested === 'en' || (!requested && !navigator.language.startsWith('de')) ? 'en' : 'de');
+
+    // Supabase appends the outcome of the verification to this address: on failure
+    // "error=…&error_description=…" (in the query or after the #).
+    const hash = new URLSearchParams(location.hash.replace(/^#/, ''));
+    const query = new URLSearchParams(location.search);
+    const failed = hash.has('error') || query.has('error') || hash.has('error_code') || query.has('error_code');
+    if (failed) {
+      document.querySelectorAll('.ok-only').forEach((el) => el.classList.add('hidden'));
+      document.querySelectorAll('.error-only').forEach((el) => el.classList.remove('hidden'));
+    }
+
+    // Drop tokens / codes from the address bar; the user signs in in the app.
+    history.replaceState(null, '', location.pathname);
+
+    // "Zur App" only makes sense on a phone. vacationdiary://login-callback is the auth
+    // return address both apps register; without tokens it simply opens the app.
+    const isPhone = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
+    const isAndroid = /android/i.test(navigator.userAgent);
+    document.querySelectorAll('[data-open-app]').forEach((a) => {
+      if (!isPhone) { a.classList.add('hidden'); return; }
+      a.href = isAndroid
+        ? 'intent://login-callback#Intent;scheme=vacationdiary;package=app.VacationDiary;end'
+        : 'vacationdiary://login-callback';
+    });
+  </script>
+</body>
+</html>

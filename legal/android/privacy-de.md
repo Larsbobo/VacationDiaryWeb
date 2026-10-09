@@ -33,7 +33,7 @@ Zusätzlich speichern wir den **Zeitpunkt deiner Einwilligung** in diese Datensc
 - **Standortdaten** — Koordinaten von Reisezielen, Aktivitäten und Unterkünften, sofern du sie angibst oder über die Kartensuche auswählst
 - **Fotos** — Bilder, die du hochlädst, einschließlich des Aufnahmeorts, sofern das Foto diesen in seinen Metadaten enthält (siehe Ziffer 7)
 - **Mitgliedschaften** — Informationen darüber, in welchen Reisegruppen du Mitglied bist
-- **Abonnement-Status** — die Information, ob dein Google-Konto ein aktives Pro-Abo (`app.vacationdiary.pro.monthly`) besitzt. Kauf und monatliche Abrechnung laufen ausschließlich über Google Play; wir erhalten **keine Zahlungsdaten, keine Rechnungsanschrift und keine Kreditkartendaten** (siehe Ziffer 12).
+- **Abonnement-Status** — die Information, ob dein Google-Konto ein aktives Pro-Abo (`app.vacationdiary.pro.monthly`) besitzt. Kauf und Abrechnung laufen ausschließlich über Google Play; wir erhalten **keine Zahlungsdaten, keine Rechnungsanschrift und keine Kreditkartendaten** (siehe Ziffer 12).
 
 Wir greifen **nicht** auf deinen Geräte-Standort zu. Die App fordert keine Standortberechtigung an; Standortdaten entstehen nur durch deine bewusste Eingabe oder über die Metadaten von Fotos, die du selbst auswählst.
 
@@ -126,7 +126,7 @@ Alle Benachrichtigungen lassen sich in den App-Einstellungen sowie in den Androi
 
 ## 12. Pro-Abonnement und Zahlungsabwicklung
 
-Pro-Funktionen (Cloud-Sync, Reisegruppen, geteilte Fotos, Benachrichtigungen bei zugewiesenen Aufgaben) sind nur mit einem aktiven Pro-Abonnement verfügbar. Das Abo verlängert sich automatisch und wird monatlich abgerechnet (Produkt-ID `app.vacationdiary.pro.monthly`).
+Pro-Funktionen (Cloud-Sync, Reisegruppen, geteilte Fotos, Benachrichtigungen bei zugewiesenen Aufgaben) sind nur mit einem aktiven Pro-Abonnement verfügbar. Das Abo wird wahlweise monatlich, alle drei Monate oder jährlich abgerechnet und verlängert sich automatisch um die gewählte Laufzeit (Produkt-ID `app.vacationdiary.pro.monthly`).
 
 **Zahlungsabwicklung**
 
@@ -135,7 +135,7 @@ Pro-Funktionen (Cloud-Sync, Reisegruppen, geteilte Fotos, Benachrichtigungen bei
 
 **Verlängerung und Kündigung**
 
-- Das Abonnement verlängert sich automatisch um jeweils einen Monat, sofern es nicht mindestens 24 Stunden vor Ende der laufenden Periode gekündigt wird.
+- Das Abonnement verlängert sich automatisch um die gewählte Laufzeit (1 Monat, 3 Monate oder 1 Jahr), sofern es nicht mindestens 24 Stunden vor Ende der laufenden Periode gekündigt wird.
 - Du kannst dein Abo jederzeit im **Google Play Store** unter *Profil → Zahlungen & Abos → Abos* verwalten und kündigen. Nach Kündigung endet dein Zugang zu den Pro-Funktionen mit Ablauf der bezahlten Periode.
 
 **Auswirkungen auf deine Daten nach Ablauf des Abos**

@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.VacationDiary",
+      "sha256_cert_fingerprints": [
+        "47:2E:C2:4E:2D:74:83:8D:AD:22:1A:87:B9:80:2C:12:35:33:8B:76:2A:E9:D9:73:62:AC:B4:4A:5D:BE:22:DD",
+        "8A:18:F1:68:0D:80:15:B6:A9:38:84:C9:87:08:CC:44:D3:AB:E2:35:93:A0:D4:4F:FF:F8:21:78:87:FB:78:A9"
+      ]
+    }
+  }
+]

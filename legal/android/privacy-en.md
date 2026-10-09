@@ -33,7 +33,7 @@ We additionally store the **timestamp of your consent** to this privacy policy p
 - **Location data** — coordinates of destinations, activities, and accommodations, if you enter them or pick them via the map search
 - **Photos** — images you upload, including the capture location if the photo contains it in its metadata (see Section 7)
 - **Memberships** — information about which travel groups you belong to
-- **Subscription status** — whether your Google account holds an active Pro subscription (`app.vacationdiary.pro.monthly`). Purchase and monthly billing run exclusively through Google Play; we receive **no payment data, no billing address, and no credit-card details** (see Section 12).
+- **Subscription status** — whether your Google account holds an active Pro subscription (`app.vacationdiary.pro.monthly`). Purchase and billing run exclusively through Google Play; we receive **no payment data, no billing address, and no credit-card details** (see Section 12).
 
 We do **not** access your device location. The app does not request a location permission; location data only comes from your explicit input or from the metadata of photos you pick yourself.
 
@@ -126,7 +126,7 @@ All notifications can be disabled at any time in the app's settings or in Androi
 
 ## 12. Pro Subscription and Payment Processing
 
-Pro features (cloud sync, travel groups, shared photos, notifications for assigned tasks) are available only with an active Pro subscription. The subscription renews automatically and is billed monthly (product ID `app.vacationdiary.pro.monthly`).
+Pro features (cloud sync, travel groups, shared photos, notifications for assigned tasks) are available only with an active Pro subscription. The subscription is billed monthly, every three months, or yearly, as you choose, and renews automatically for the selected term (product ID `app.vacationdiary.pro.monthly`).
 
 **Payment processing**
 
@@ -135,7 +135,7 @@ Pro features (cloud sync, travel groups, shared photos, notifications for assign
 
 **Renewal and cancellation**
 
-- The subscription automatically renews for another month unless it is cancelled at least 24 hours before the end of the current period.
+- The subscription automatically renews for the selected term (1 month, 3 months, or 1 year) unless it is cancelled at least 24 hours before the end of the current period.
 - You can manage and cancel your subscription at any time in the **Google Play Store** under *Profile → Payments & subscriptions → Subscriptions*. After cancellation, your access to Pro features ends when the paid period expires.
 
 **Effect on your data after the subscription ends**

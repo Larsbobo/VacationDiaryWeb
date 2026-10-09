@@ -32,7 +32,7 @@ The free version lets you do the following locally on your device:
 - Travel groups / invitations / shared vacations
 - Photo backup on a server
 
-These features can be unlocked via a monthly subscription to the Pro version.
+These features can be unlocked via a subscription to the Pro version.
 
 ## 3. No Account Required
 
@@ -65,7 +65,7 @@ You can end use at any time by uninstalling the app. This irretrievably deletes 
 
 ## 8. In-App Purchases
 
-The Pro version can be acquired through a monthly auto-renewing subscription. Purchase, renewal, and billing are handled via Google Play; the Google Play Terms of Service apply. You can cancel the subscription at any time in the Google Play Store under *Profile → Payments & subscriptions → Subscriptions*.
+The Pro version can be acquired through an auto-renewing subscription with a term of one month, three months, or one year. Purchase, renewal, and billing are handled via Google Play; the Google Play Terms of Service apply. You can cancel the subscription at any time in the Google Play Store under *Profile → Payments & subscriptions → Subscriptions*.
 
 ## 9. Changes
 

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Du wurdest zu einer Reise in VacationDiary eingeladen.">
+  <meta property="og:title" content="Einladung zu einer Reise in VacationDiary">
+  <meta property="og:description" content="Tippe auf den Link, um der Reise in der VacationDiary-App beizutreten.">
+  <title>Einladung | Vacation Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .invite-page { padding-bottom: 70px; padding-top: 70px; max-width: 720px; }
+    .invite-page h1 { font-size: clamp(40px, 6vw, 64px); }
+    .invite-page .lead { color: var(--muted); font-size: 16px; max-width: 560px; }
+    .invite-card { background: var(--glass); border: 1px solid rgba(255,255,255,.82); border-radius: 26px; box-shadow: 0 12px 28px rgba(32,50,88,.07); margin-top: 28px; padding: 26px 28px; }
+    .invite-card h2 { font-size: 21px; letter-spacing: -.04em; line-height: 1.2; margin-bottom: 12px; }
+    .invite-card p, .invite-card li { color: var(--muted); font-size: 14px; }
+    .invite-card ol { margin: 0; padding-left: 20px; }
+    .invite-card li { margin-bottom: 8px; }
+    .invite-card strong { color: var(--ink); }
+    .open-button { align-items: center; background: var(--ink); border: 0; border-radius: 999px; box-shadow: 0 9px 18px rgba(23,32,51,.16); color: white; cursor: pointer; display: inline-flex; font: inherit; font-size: 16px; font-weight: 800; gap: 10px; margin-top: 30px; padding: 15px 24px; }
+    .open-button span { color: var(--yellow); }
+    .code-row { align-items: center; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .code { background: rgba(75,120,223,.1); border-radius: 10px; color: var(--ink); font-family: var(--mono); font-size: 13px; overflow-wrap: anywhere; padding: 8px 12px; }
+    .copy-button { background: none; border: 1px solid var(--ink); border-radius: 999px; color: var(--ink); cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; padding: 6px 14px; }
+    .store-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+    .store-links a { background: var(--ink); border-radius: 14px; color: white; font-size: 13px; font-weight: 800; padding: 10px 16px; }
+    .store-links a span { color: var(--yellow); margin-left: 6px; }
+    .hidden { display: none !important; }
+    [data-lang]:not(.is-current) { display: none; }
+    @media (max-width: 760px) { .invite-page { padding-top: 50px; } .invite-card { padding: 22px 20px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Vacation Diary Startseite">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span>vacation<span>diary</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Sprache">
+      <div class="language-switch" aria-label="Language / Sprache"><button class="language-button is-active" type="button" data-language="de">DE</button><span>/</span><button class="language-button" type="button" data-language="en">EN</button></div>
+    </nav>
+  </header>
+
+  <main class="invite-page page-width">
+    <!-- Deutsch -->
+    <section data-lang="de" class="is-current">
+      <div class="valid-only">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Einladung</span></p>
+        <h1>Du bist<br><em>eingeladen.</em></h1>
+        <p class="lead">Jemand möchte eine Reise mit dir planen. Öffne die Einladung in der VacationDiary-App, um beizutreten — du siehst dann alle Details, Pläne und Fotos.</p>
+        <a class="open-button" data-open-app href="#">In VacationDiary öffnen <span>↗</span></a>
+
+        <article class="invite-card">
+          <h2>Klappt nicht?</h2>
+          <ol>
+            <li>Installiere VacationDiary und melde dich mit deinem Konto an.</li>
+            <li>Tippe danach erneut auf den Link in deiner Nachricht — oder gib in der App unter <strong>„Einladung einlösen“</strong> diesen Code ein:</li>
+          </ol>
+          <div class="code-row"><code class="code" data-token></code><button class="copy-button" type="button" data-copy data-done="Kopiert ✓">Kopieren</button></div>
+          <div class="store-links">
+            <a href="https://play.google.com/store/apps/details?id=app.VacationDiary" target="_blank" rel="noopener">Google Play<span>↗</span></a>
+            <a href="https://apps.apple.com/de/" target="_blank" rel="noopener">App Store<span>↗</span></a>
+          </div>
+          <p>Einladungslinks sind 3 Tage gültig und können nur einmal verwendet werden.</p>
+        </article>
+      </div>
+      <div class="invalid-only hidden">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Einladung</span></p>
+        <h1>Link<br><em>ungültig.</em></h1>
+        <p class="lead">Dieser Einladungslink ist unvollständig. Bitte die Person, die dich eingeladen hat, dir einen neuen Link zu schicken.</p>
+      </div>
+    </section>
+
+    <!-- English -->
+    <section data-lang="en">
+      <div class="valid-only">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Invitation</span></p>
+        <h1>You're<br><em>invited.</em></h1>
+        <p class="lead">Someone wants to plan a trip with you. Open the invitation in the VacationDiary app to join — you'll see all details, plans and photos.</p>
+        <a class="open-button" data-open-app href="#">Open in VacationDiary <span>↗</span></a>
+
+        <article class="invite-card">
+          <h2>Not working?</h2>
+          <ol>
+            <li>Install VacationDiary and sign in to your account.</li>
+            <li>Then tap the link in your message again — or enter this code in the app under <strong>"Redeem invitation"</strong>:</li>
+          </ol>
+          <div class="code-row"><code class="code" data-token></code><button class="copy-button" type="button" data-copy data-done="Copied ✓">Copy</button></div>
+          <div class="store-links">
+            <a href="https://play.google.com/store/apps/details?id=app.VacationDiary" target="_blank" rel="noopener">Google Play<span>↗</span></a>
+            <a href="https://apps.apple.com/de/" target="_blank" rel="noopener">App Store<span>↗</span></a>
+          </div>
+          <p>Invitation links are valid for 3 days and can only be used once.</p>
+        </article>
+      </div>
+      <div class="invalid-only hidden">
+        <p class="eyebrow"><span></span> <span>VacationDiary · Invitation</span></p>
+        <h1>Invalid<br><em>link.</em></h1>
+        <p class="lead">This invitation link is incomplete. Please ask the person who invited you to send you a new link.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">✳</span><span>vacation<span>diary</span></span></a><p>Made for the moments in between.</p><div class="footer-links"><a href="../#legal">Legal</a><a href="../#support">Support</a></div><small>© 2026 Vacation Diary</small></footer>
+
+  <script>
+    // Same DE / EN switch as the other pages; ?lang=en preselects English.
+    const setLanguage = (language) => {
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-lang]').forEach((section) => section.classList.toggle('is-current', section.dataset.lang === language));
+      document.querySelectorAll('.language-button').forEach((button) => button.classList.toggle('is-active', button.dataset.language === language));
+      document.title = language === 'de' ? 'Einladung | Vacation Diary' : 'Invitation | Vacation Diary';
+    };
+    document.querySelectorAll('.language-button').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+    const params = new URLSearchParams(location.search);
+    const requested = params.get('lang');
+    setLanguage(requested === 'en' || (!requested && !navigator.language.startsWith('de')) ? 'en' : 'de');
+
+    // The app shares https://vacationdiary.app/invite/?t=<uuid>; /invite/<uuid> is accepted too.
+    const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    const candidate = params.get('t') || location.pathname.replace(/\/+$/, '').split('/').pop();
+    const token = uuid.test(candidate || '') ? candidate.toLowerCase() : null;
+
+    if (!token) {
+      document.querySelectorAll('.valid-only').forEach((el) => el.classList.add('hidden'));
+      document.querySelectorAll('.invalid-only').forEach((el) => el.classList.remove('hidden'));
+    } else {
+      // vacationdiary://invite/<uuid> is the deep link both apps understand. On Android an
+      // intent: URL is used instead, which falls back to Google Play if the app is missing.
+      const deepLink = `vacationdiary://invite/${token}`;
+      const isAndroid = /android/i.test(navigator.userAgent);
+      const playUrl = 'https://play.google.com/store/apps/details?id=app.VacationDiary';
+      const androidLink = `intent://invite/${token}#Intent;scheme=vacationdiary;package=app.VacationDiary;S.browser_fallback_url=${encodeURIComponent(playUrl)};end`;
+      const openLink = isAndroid ? androidLink : deepLink;
+
+      document.querySelectorAll('[data-open-app]').forEach((a) => { a.href = openLink; });
+      document.querySelectorAll('[data-token]').forEach((el) => { el.textContent = token; });
+      document.querySelectorAll('[data-copy]').forEach((button) => button.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(token); button.textContent = button.dataset.done; } catch (e) { /* clipboard unavailable */ }
+      }));
+
+      // Try to hand over to the app straight away on phones; the button stays as fallback.
+      if (/android|iphone|ipad|ipod/i.test(navigator.userAgent)) {
+        setTimeout(() => { location.href = openLink; }, 300);
+      }
+    }
+  </script>
+</body>
+</html>
