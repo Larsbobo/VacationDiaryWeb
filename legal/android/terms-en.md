@@ -1,6 +1,6 @@
 # Terms of Use
 
-**Last updated:** 03.10.2026 (Android version)
+**Last updated:** 10.10.2026 (Android version)
 
 These Terms of Use govern the use of the VacationDiary app ("App"). By creating an account, you agree to these terms.
 
@@ -23,8 +23,7 @@ The app lets you:
 - Write journal entries about your travel days, optionally via voice memo (transcribed locally),
 - Use AI-assisted suggestions on compatible devices (journal drafts, trip ideas, packing lists, document categorization),
 - Use app shortcuts and a home-screen widget for selected features,
-- Plan shared vacations together with other users,
-- Optionally use the **Community**: share travel tips publicly, follow other users, comment on and like posts.
+- Plan shared vacations together with other users.
 
 The core features are free to use. There is no guarantee of continuous availability or error-free operation.
 
@@ -50,17 +49,6 @@ The following are prohibited:
 - Attempts to bypass the technical security of the app,
 - Commercial use without our consent,
 - Automated scraping of the app.
-
-## 5b. Community
-
-If you join the community area, the following additional rules apply:
-
-- Your posts, comments, and community profile (username, bio, avatar) are **publicly visible to all other community members**.
-- You pick a unique username that no other user can reuse while your account exists.
-- Prohibited are in particular harassment, hate, sexual content, glorification of violence, misinformation, spam, and publishing personal data of third parties without their consent.
-- Every post and comment can be flagged to us by other users via the **"Report"** function. We review reports promptly and reserve the right to remove content or suspend accounts.
-- You can hide any user from your feed and search results at any time via the **"Block"** function.
-- To prevent abuse, server-side rate limits apply: max 10 posts, 30 comments, and 20 reports per hour and account.
 
 ## 5a. AI Suggestions
 

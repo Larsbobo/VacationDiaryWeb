@@ -1,6 +1,6 @@
 # Nutzungsbedingungen
 
-**Stand:** 03.10.2026 (Android-Version)
+**Stand:** 10.10.2026 (Android-Version)
 
 Diese Nutzungsbedingungen regeln die Nutzung der App VacationDiary (im Folgenden "App"). Durch das Erstellen eines Kontos erklärst du dich mit diesen Bedingungen einverstanden.
 
@@ -23,8 +23,7 @@ Die App ermöglicht es dir,
 - Journal-Einträge zu deinen Reisetagen zu schreiben, optional per Sprachnotiz (lokal transkribiert),
 - Auf kompatiblen Geräten KI-gestützte Vorschläge zu nutzen (Journal-Entwürfe, Reise-Ideen, Packlisten, Dokumenten-Kategorisierung),
 - App-Verknüpfungen und ein Startbildschirm-Widget für ausgewählte Funktionen zu nutzen,
-- gemeinsame Urlaube mit anderen Nutzern zu planen,
-- optional die **Community** zu nutzen: Reisetipps öffentlich teilen, anderen Nutzern folgen, Beiträge kommentieren und liken.
+- gemeinsame Urlaube mit anderen Nutzern zu planen.
 
 Die Nutzung der Grundfunktionen ist kostenlos. Es bestehen keine Garantien für eine ständige Verfügbarkeit oder Fehlerfreiheit.
 
@@ -50,17 +49,6 @@ Untersagt sind insbesondere:
 - der Versuch, die technische Sicherheit der App zu umgehen,
 - die kommerzielle Nutzung ohne unsere Zustimmung,
 - das automatisierte Auslesen der App ("Scraping").
-
-## 5b. Community
-
-Wenn du dem Community-Bereich beitrittst, gelten zusätzlich folgende Regeln:
-
-- Deine dort veröffentlichten Beiträge, Kommentare und dein Community-Profil (Benutzername, Bio, Avatar) sind **für alle anderen Community-Mitglieder öffentlich sichtbar**.
-- Du wählst einen eindeutigen Benutzernamen, den andere Nutzer nicht mehr wieder frei verwenden können, solange dein Konto besteht.
-- Untersagt sind insbesondere Belästigung, Hass, sexuelle Inhalte, Gewaltverherrlichung, Fehlinformation, Spam sowie das Veröffentlichen personenbezogener Daten Dritter ohne deren Einwilligung.
-- Jeder Beitrag und Kommentar kann von anderen Nutzern über die **„Melden"**-Funktion an uns weitergegeben werden. Wir prüfen Meldungen zeitnah und behalten uns vor, Inhalte zu entfernen oder Konten zu sperren.
-- Du kannst jederzeit einzelne Nutzer über die **„Blockieren"**-Funktion aus deinem Feed und deinen Suchergebnissen ausblenden.
-- Zum Schutz vor Missbrauch bestehen Server-seitige Rate-Limits: maximal 10 Beiträge, 30 Kommentare und 20 Meldungen pro Stunde und Konto.
 
 ## 5a. KI-Vorschläge
 
